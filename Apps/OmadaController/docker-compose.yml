@@ -119,12 +119,10 @@ x-casaos:
   developer: TP Link
   icon: https://cdn.jsdelivr.net/gh/comandrei/CasaOS-AppStore@main/Apps/OmadaController/icon.png
   screenshot_link:
-    - https://cdn.jsdelivr.net/gh/comandrei/CasaOS-AppStore@main/Apps/Unifi-controller/screenshot-1.png
-    - https://cdn.jsdelivr.net/gh/comandrei/CasaOS-AppStore@main/Apps/Unifi-controller/screenshot-2.png
-    - https://cdn.jsdelivr.net/gh/comandrei/CasaOS-AppStore@main/Apps/Unifi-controller/screenshot-3.png
+    - https://cdn.jsdelivr.net/gh/comandrei/CasaOS-AppStore@main/Apps/OmadaController/screenshot-1.jpg
+    - https://cdn.jsdelivr.net/gh/comandrei/CasaOS-AppStore@main/Apps/OmadaController/screenshot-2.jpg
   tagline:
-    en_US: With the on-premises Omada Software Controller, Omada Cloud SDN offers cloud access to centrally manage of the whole network, including access points, ...
-  thumbnail: https://cdn.jsdelivr.net/gh/comandrei/CasaOS-AppStore@main/Apps/Unifi-controller/thumbnail.png
+    en_US: With the on-premises Omada Software Controller, Omada Cloud SDN offers cloud access to centrally manage of the whole network, including access points, switches and routers.
   tips: {}
   title:
     en_US: Omada Controller
