@@ -9,7 +9,7 @@ services:
         soft: 4096
         hard: 8192
     stop_grace_period: 60s
-    network_mode: bridge
+    network_mode: host
     ports:
       - 8088:8088
       - 8043:8043
