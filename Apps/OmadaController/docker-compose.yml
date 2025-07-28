@@ -123,12 +123,11 @@ x-casaos:
     - https://cdn.jsdelivr.net/gh/comandrei/CasaOS-AppStore@main/Apps/Unifi-controller/screenshot-2.png
     - https://cdn.jsdelivr.net/gh/comandrei/CasaOS-AppStore@main/Apps/Unifi-controller/screenshot-3.png
   tagline:
-    en_US: Reliably Smart
-
+    en_US: With the on-premises Omada Software Controller, Omada Cloud SDN offers cloud access to centrally manage of the whole network, including access points, ...
   thumbnail: https://cdn.jsdelivr.net/gh/comandrei/CasaOS-AppStore@main/Apps/Unifi-controller/thumbnail.png
   tips: {}
   title:
-    en_RO: Omada Controller
+    en_US: Omada Controller
     ro_RO: Omada Controller
   index: /
   port_map: "8088"
