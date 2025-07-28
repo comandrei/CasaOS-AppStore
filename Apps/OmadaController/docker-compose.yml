@@ -37,14 +37,75 @@ services:
       - SHOW_MONGODB_LOGS=false
       - SSL_CERT_NAME=tls.crt
       - SSL_KEY_NAME=tls.key
-      - TZ=Etc/UTC
-    volumes:
-      - omada-data:/opt/tplink/EAPController/data
-      - omada-logs:/opt/tplink/EAPController/logs
+      - TZ=$TZ
 
-volumes:
-  omada-data:
-  omada-logs:
+    volumes:
+      # Mapping for data storage.
+      - /DATA/AppData/$AppID/data:/opt/tplink/EAPController/data
+
+      # Mapping for log storage.
+      - /DATA/AppData/$AppID/logs:/opt/tplink/EAPController/logs
+
+    x-casaos: # CasaOS specific configuration
+      envs:
+        - container: PUID
+          description:
+            en_us: Process UID
+        - container: PGID
+          description:
+            en_us: Process GID
+        - container: MANAGE_HTTP_PORT
+          description:
+            en_us: Management HTTP Port
+        - container: MANAGE_HTTPS_PORT
+          description:
+            en_us: Management HTTPS Port
+        - container: PORTAL_HTTP_PORT
+          description:
+            en_us: User Portal HTTP Port
+        - container: PORTAL_HTTPS_PORT
+          description:
+            en_us: User Portal HTTPS Port
+        - container: PORT_APP_DISCOVERY
+          description:
+            en_us: App Discovery Port
+        - container: PORT_ADOPT_V1
+          description:
+            en_us: Adopt V1 Port
+        - container: PORT_UPGRADE_V1
+          description:
+            en_us: Upgrade V1 Port
+        - container: PORT_MANAGER_V1
+          description:
+            en_us: Manager V1 Port
+        - container: PORT_MANAGER_V2
+          description:
+            en_us: Manager V2 Port
+        - container: PORT_DISCOVERY
+          description:
+            en_us: Discovery Port
+        - container: SHOW_SERVER_LOGS
+          description:
+            en_us: Show Server Logs
+        - container: SHOW_MONGODB_LOGS
+          description:
+            en_us: Show MongoDB Logs
+        - container: SSL_CERT_NAME
+          description:
+            en_us: SSL Certificate Name
+        - container: SSL_KEY_NAME
+          description:
+            en_us: SSL Key Name
+        - container: TZ
+          description:
+            en_us: Timezone
+      volumes:
+        - container: /opt/tplink/EAPController/data
+          description:
+            en_us: "Container Path: /opt/tplink/EAPController/data"
+        - container: /opt/tplink/EAPController/logs
+          description:
+            en_us: "Container Path: /opt/tplink/EAPController/logs"
 
 x-casaos:
   architectures:
@@ -62,7 +123,7 @@ x-casaos:
     - https://cdn.jsdelivr.net/gh/comandrei/CasaOS-AppStore@main/Apps/Unifi-controller/screenshot-2.png
     - https://cdn.jsdelivr.net/gh/comandrei/CasaOS-AppStore@main/Apps/Unifi-controller/screenshot-3.png
   tagline:
-    en_RO: Reliably Smart
+    en_US: Reliably Smart
 
   thumbnail: https://cdn.jsdelivr.net/gh/comandrei/CasaOS-AppStore@main/Apps/Unifi-controller/thumbnail.png
   tips: {}
@@ -70,4 +131,4 @@ x-casaos:
     en_RO: Omada Controller
     ro_RO: Omada Controller
   index: /
-  port_map: "8043"
+  port_map: "8088"
